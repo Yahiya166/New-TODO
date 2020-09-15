@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyB_yvp3EbU5mFrDqeEpyinApSzU_YhQPPk",
+      authDomain: "new-todo-74005.firebaseapp.com",
+      databaseURL: "https://new-todo-74005.firebaseio.com",
+      projectId: "new-todo-74005",
+      storageBucket: "new-todo-74005.appspot.com",
+      messagingSenderId: "412605905392",
+      appId: "1:412605905392:web:51fa3b14e113cdfa99c535",
+      measurementId: "G-HETHKFS3FL"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<style>
+
+.input{
+    margin-top: 100px;
+    background-color: black ;    
+        border: 2px solid rgb(33, 185, 84);
+        color: #ffff;
+        box-shadow: 1px 1px 3px black;
+        opacity: 0.8;
+}
+
+.btn{
+    display: inline-block; 
+    margin: 2px;
+    border: 2px solid rgb(33, 185, 84);
+        box-shadow: 1px 1px 3px black;
+        opacity: 0.8;
+}   
+.navbar{
+    display: inline-block;
+}
+.center{
+/* background-image: url("https://cdn.wallpaperhub.app/cloudcache/7/4/f/3/d/5/74f3d51cbec9db78da32e103de1b28538af1b76a.jpg"); */
+background-color: rgba(0, 0, 0, 0.521);
+}
+
+.list{
+    color: #F0F8FF;
+    margin-top: 50px;
+}
+
+.img{
+    border: 2px solid rgb(33, 185, 84);
+    box-shadow: 1px 1px 3px black;
+}
+
+
+
+
+</style>
+<body class="center">
+
+
+<div class="TODO">
+     <div class="navbar">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-light ">
+                        <img class="img" onclick="back()" src="https://toppng.com/uploads/preview/logout-11551049168o9cg0mxxib.png" width="50px" height="40px" alt="TODO LIST" loading="lazy"  alt="logout">
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+       
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <center>
+                    <input class="input" type="text" id="TO_DO"  size="20" maxlength="20" placeholder="Write TODO">
+                    <button type="button" class="btn btn-dark" onclick = "addto()" > Add ITEMS </button>    
+                    <button type="button" class="btn btn-dark" onclick="deleteAll()">Delete All</button>
+                </center>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+    <div class="list">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <center>
+                   <ul id="list">
+
+                   </ul>
+                </center>
+             </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+<script src="app.js"></script>
+</html>

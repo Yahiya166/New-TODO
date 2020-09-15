@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+<script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyB_yvp3EbU5mFrDqeEpyinApSzU_YhQPPk",
+          authDomain: "new-todo-74005.firebaseapp.com",
+          databaseURL: "https://new-todo-74005.firebaseio.com",
+          projectId: "new-todo-74005",
+          storageBucket: "new-todo-74005.appspot.com",
+          messagingSenderId: "412605905392",
+          appId: "1:412605905392:web:51fa3b14e113cdfa99c535",
+          measurementId: "G-HETHKFS3FL"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+</script>
+</head>
+<style>
+
+
+    .body{
+        background-color: rgba(0, 0, 0, 0.521);
+    }
+
+    .signup{
+            border: 2px solid rgb(33, 185, 84);
+            width: 400px;
+            margin-top: 230px;
+            background-color: rgb(154, 219, 69);
+            box-shadow: 3px 3px 5px black;
+    }
+
+
+
+    .input{
+        width: 172px;
+        padding: 2px;
+        margin-bottom: 10px;
+        background-color: black;    
+        color: #ffff;
+        border: 2px solid rgb(33, 185, 84);
+        box-shadow: 1px 1px 3px black;
+        opacity: 0.8;
+    }
+
+    
+
+
+    .break{
+        text-shadow: 10px 15px 4px black;
+        margin-bottom: 50px;
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+
+    .btn{
+        margin-top: 40px;
+        border: 2px solid rgb(33, 185, 84);
+        box-shadow: 1px 1px 3px black;
+        opacity: 0.8;
+    }
+
+    .Rigister{
+        margin-top: 40px
+    }
+
+</style>
+<body  class="body">
+        <div>
+            <center>
+
+                <div>
+                    <div class="signup">
+    
+                <h3 class="break"> Signup </h3>
+
+
+                <form action="signup" method="post">
+
+                    <table>
+                        <tr>
+                            <td> <b> <i> USERNAME: </i> </b> </td>
+                            <td>  <input class="input" id="email" type="email" name="EMAIL"placeholder="Enter Your Email"> </td>
+                        </tr>
+    
+                        <tr>
+                            <td> <b> <i> PASSWORD: </i> </b> </td>
+                            <td> <input class="input" id="password" type="password" name="PASSWORD" placeholder="Enter Your Password"> </td>
+                        </tr>
+                    </table>
+    
+                    <button type="button" class="btn btn-dark" onclick="back()"> Back </button>
+                    <button type="button" class="btn btn-dark" onclick="signup()"> Signup </button>
+    
+                        <p class="Rigister"> Not Yet A Member So Rigister Your Account </p>
+                    </div>
+    
+    
+                </form>
+            </center>
+        </div>
+    
+</body>
+<script src="app.js"></script>
+</html>
